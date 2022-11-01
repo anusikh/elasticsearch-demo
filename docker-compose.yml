@@ -1,0 +1,16 @@
+version: "3.9"
+
+networks:
+  elastic:
+    external: true
+
+services:
+  elasticsearch:
+    image: elasticsearch:8.2.2
+    container_name: elasticsearch
+    ports:
+      - 9200:9200
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+      - xpack.security.enabled=false

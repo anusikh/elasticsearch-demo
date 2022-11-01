@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "2c9e285d-e53d-4e22-822e-2d8a76dafa3d",
+		"name": "Elasticsearch-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11510718"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"BOOK-5\",\r\n    \"name\":\"ElasticSearchBook\",\r\n    \"description\":\"wonderful book\",\r\n    \"price\":100.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/createProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/searchProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"searchProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/deleteProduct/BOOK-5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deleteProduct",
+						"BOOK-5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getProduct/BOOK-4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getProduct",
+						"BOOK-4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
